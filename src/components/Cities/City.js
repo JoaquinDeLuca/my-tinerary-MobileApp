@@ -1,8 +1,5 @@
 import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
-import SaoPaulo from '../../../assets/cards/saoPaulo.jpg'
-
-
 
 export default function CitiesScreen(props) {
 
@@ -18,6 +15,7 @@ export default function CitiesScreen(props) {
                     <Text style={styles.CitiesText}>{cities.city}</Text>
                     <Text style={styles.CitiesTextCoutry}>{cities.country}</Text>
                     <Text style={styles.CitiesTextInfo}>{cities.information}</Text>
+                    <Text style={styles.CitiesButtom}>View More </Text>
                 </View>
             </View>
         </View>
@@ -30,18 +28,20 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     CitiesText: {
-        fontSize: 26,
-        marginBottom: 10,
+        fontSize: 28,
+        // marginBottom: ,
         color: "#fff"
     },
     CitiesTextCoutry: {
-        fontSize: 26,
-        marginBottom: 10,
+        fontSize: 22,
+        marginBottom: 6,
         color: "#fff"
     },
     CitiesTextInfo: {
-        fontSize: 20,
-        marginBottom: 10,
+        fontSize: 16,
+        // marginBottom: 10,
+        width: 200,
+        height: 80,
         color: "#fff"
     },
     CitiesCard3: {
@@ -65,5 +65,11 @@ const styles = StyleSheet.create({
         height: 200,
         width: 150,
         borderRadius: 15
+    },
+    CitiesButtom: {
+        fontSize: 22,
+        marginBottom: 6,
+        color: "#fff",
+        textAlign: "right"
     }
 })
