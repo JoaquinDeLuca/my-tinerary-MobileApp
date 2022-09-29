@@ -1,23 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
-
+import { Provider } from 'react-redux'
+import store from './src/features/store'
 import HomeScreen from './src/screens/HomeScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen'
+import CitiesScreen from './src/screens/CitiesScreen'
 import SignUp from './src/components/SignUp';
-
-// redux
-import { Provider } from 'react-redux';
-import store from './src/features/store';
 
 export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-
         {/* <HomeScreen  /> */}
         {/* <WelcomeScreen /> */}
-        <SignUp />
+        <CitiesScreen />
+        {/* <SignUp /> */}
         <StatusBar style="auto" />
       </View>
     </Provider>
@@ -27,8 +25,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0000',
+    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
   },
 });
