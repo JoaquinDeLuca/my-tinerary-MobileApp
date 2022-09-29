@@ -14,8 +14,8 @@ export default function App() {
       <View style={styles.container}>
         {/* <HomeScreen  /> */}
         {/* <WelcomeScreen /> */}
-        <CitiesScreen />
-        {/* <SignUp /> */}
+        {/* <CitiesScreen /> */}
+        <SignUp />
         <StatusBar style="auto" />
       </View>
     </Provider>
@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
   },
 });
