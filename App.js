@@ -4,14 +4,23 @@ import { StyleSheet, View } from 'react-native';
 
 import HomeScreen from './src/screens/HomeScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen'
+import SignUp from './src/components/SignUp';
+
+// redux
+import { Provider } from 'react-redux';
+import store from './src/features/store';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <HomeScreen  /> */}
-      <WelcomeScreen />
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+
+        {/* <HomeScreen  /> */}
+        {/* <WelcomeScreen /> */}
+        <SignUp />
+        <StatusBar style="auto" />
+      </View>
+    </Provider>
   );
 }
 
