@@ -6,6 +6,7 @@ import store from './src/features/store'
 import HomeScreen from './src/screens/HomeScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen'
 import CitiesScreen from './src/screens/CitiesScreen'
+import SignUp from './src/components/SignUp';
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       <View style={styles.container}>
         {/* <HomeScreen  /> */}
         {/* <WelcomeScreen /> */}
-        <CitiesScreen />
+        {/* <CitiesScreen /> */}
+        <SignUp />
         <StatusBar style="auto" />
       </View>
     </Provider>
@@ -25,6 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
   },
 });
