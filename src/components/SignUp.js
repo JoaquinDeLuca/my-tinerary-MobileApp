@@ -60,7 +60,7 @@ export default function SignUp({ navigation }) {
 
     return (
 
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
 
             <Image
                 style={styles.logo}
@@ -121,7 +121,7 @@ export default function SignUp({ navigation }) {
                 <Button color='#B84668' onPress={() => saveData()} title='Sign Up'></Button>
             </View>
 
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -129,6 +129,8 @@ export default function SignUp({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
+        backgroundColor: "#fff",
+        height: "100%",
     },
     p: {
         fontSize: 19,
