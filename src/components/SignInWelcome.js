@@ -35,7 +35,7 @@ export default function WelcomeScreen(props) {
                         AsyncStorage.setItem('token', JSON.stringify(response.data.response.token))
                         // aca pasaria el verifyToken
                         console.log('______OK______')
-                        AsyncStorage.setItem('user',JSON.stringify(response.data.response.user))
+                        AsyncStorage.setItem('user', JSON.stringify(response.data.response.user))
                         navigation.navigate('ButtomNav')
                     } else {
                         // alert of error
@@ -58,7 +58,7 @@ export default function WelcomeScreen(props) {
 
     // AsyncStorage.getItem('token').then(response => console.log(response))
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <Image
                 style={styles.logo}
                 source={{ uri: 'https://i.postimg.cc/Fs8QT5YB/logo3.png' }} type="logo"
@@ -91,13 +91,15 @@ export default function WelcomeScreen(props) {
                 navigation.navigate('SignUp')
             }}></Button>
 
-        </SafeAreaView>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
+        backgroundColor: "#fff",
+        height: "100%",
     },
     titleText: {
         fontSize: 26,

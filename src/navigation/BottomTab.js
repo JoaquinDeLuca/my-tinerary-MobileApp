@@ -8,7 +8,6 @@ import UserScreen from '../screens/UserScreen';
 import city from '../../assets/icons/city.png'
 import Home from '../../assets/icons/home.png'
 import Tinerary from '../../assets/icons/logo1.png'
-import Aguh from '../../assets/icons/Aguh.jpg'
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
@@ -26,17 +25,17 @@ export default function BottomTab({ navigation }) {
     // console.log(user)
     useEffect(() => {
         if (AsyncStorage.getItem('user')) {
-        getData();
-        // console.log('Hi!')
+            getData();
+            // console.log('Hi!')
         }
     }, [])
-  
+
     const getData = async () => {
         try {
-        const jsonValue = await AsyncStorage.getItem('user')
-        return jsonValue != null ? dispatch(setCredentials((JSON.parse(jsonValue)))): null;
-        } catch(e) {
-        // error reading value
+            const jsonValue = await AsyncStorage.getItem('user')
+            return jsonValue != null ? dispatch(setCredentials((JSON.parse(jsonValue)))) : null;
+        } catch (e) {
+            // error reading value
         }
     }
 
@@ -77,14 +76,14 @@ export default function BottomTab({ navigation }) {
                 options={{
                     headerShadowVisible: false,
                     tabBarIcon: ({ focused }) => (
-                         user === null ?
-                        <View>
-                            <Image source={{uri: user.photo }} style={focused ? styles.NavBarUserActive : styles.NavBarUser} />
-                        </View>
-                        : 
-                        <View>
-                            <Image source={{uri:'https://i.postimg.cc/J42nVhXL/usuario.png'}} style={focused ? styles.NavBarUserActive : styles.NavBarUser} />
-                        </View>
+                        user === null ?
+                            <View>
+                                <Image source={{ uri: 'https://i.postimg.cc/J42nVhXL/usuario.png' }} style={focused ? styles.NavBarUserActive : styles.NavBarUser} />
+                            </View>
+                            :
+                            <View>
+                                <Image source={{ uri: user.photo }} style={focused ? styles.NavBarUserActive : styles.NavBarUser} />
+                            </View>
                     )
                 }} />
         </Tab.Navigator>
