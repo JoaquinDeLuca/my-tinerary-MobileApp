@@ -12,10 +12,10 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        {/* <HomeScreen  /> */}
+        <HomeScreen  />
         {/* <WelcomeScreen /> */}
         {/* <CitiesScreen /> */}
-        <SignUp />
+        {/* <SignUp /> */}
         <StatusBar style="auto" />
       </View>
     </Provider>
