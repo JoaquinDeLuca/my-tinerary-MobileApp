@@ -6,14 +6,13 @@ import store from './src/features/store'
 import WelcomeScreen from './src/screens/WelcomeScreen'
 import SignUp from './src/components/SignUp';
 import BottomTab from './src/navigation/BottomTab';
+import SignInStack from './src/navigation/SignInStack';
 
 export default function App() {
   return (
     <Provider store={store}>
-      {/* <WelcomeScreen /> */}
-      {/* <SignUp /> */}
       <NavigationContainer>
-        <BottomTab />
+        <SignInStack />
       </NavigationContainer>
       <StatusBar style="auto" />
     </Provider>

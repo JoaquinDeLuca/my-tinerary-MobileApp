@@ -1,26 +1,26 @@
-import { View, Text, Button, Image, StyleSheet, TextInput, Alert  } from 'react-native'
+import { View, Text, Button, Image, StyleSheet, TextInput, Alert } from 'react-native'
 import { useState } from 'react'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSignUpUserMutation } from '../features/userApi'
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
 
     const [signUpUser] = useSignUpUserMutation()
 
     const [register, setRegister] = useState({
-        name:'',
-        lastName:'',
+        name: '',
+        lastName: '',
         email: "",
         password: "",
-        photo:'',
-        country:'',
+        photo: '',
+        country: '',
         role: 'user',
         from: 'form'
     })
 
     const captureData = (text, name) => {
-        setRegister({...register, [name]: text})
+        setRegister({ ...register, [name]: text })
     }
     // console.log(register)
 
@@ -37,100 +37,100 @@ export default function SignUp() {
         }
         console.log(userDate)
         signUpUser(userDate)
-        .then(response => {
-            if (response.data.success === true) {
-                console.log(response)
-                Alert.alert(
-                    'User',
-                    'Successfully registered user, verify your account in the email we sent'
-                )
-            }
-            else {
-                console.log('_____INCORRECT_____')
-                Alert.alert(
-                    'Incorrect',
-                    'check the fields',
-                )
-            }
-        })
-        .then(response => console.log(response))
+            .then(response => {
+                if (response.data.success === true) {
+                    console.log(response)
+                    Alert.alert(
+                        'User',
+                        'Successfully registered user, verify your account in the email we sent'
+                    )
+                }
+                else {
+                    console.log('_____INCORRECT_____')
+                    Alert.alert(
+                        'Incorrect',
+                        'check the fields',
+                    )
+                }
+            })
+            .then(response => console.log(response))
     }
 
 
 
-  return (
+    return (
 
-    <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
-        <Image 
-            style={styles.logo} 
-            source={{uri:'https://i.postimg.cc/Fs8QT5YB/logo3.png'}} type="logo" 
-        />
+            <Image
+                style={styles.logo}
+                source={{ uri: 'https://i.postimg.cc/Fs8QT5YB/logo3.png' }} type="logo"
+            />
 
-        <Text style={styles.p}>Register to continue</Text>  
+            <Text style={styles.p}>Register to continue</Text>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='name'
-            name='Name'
-            onChangeText={text => captureData(text, 'Name')}
-        >
-        </TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='name'
+                name='Name'
+                onChangeText={text => captureData(text, 'Name')}
+            >
+            </TextInput>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='LastName'
-            name='LastName'
-            onChangeText={text => captureData(text, 'LastName')}
-        >
-        </TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='LastName'
+                name='LastName'
+                onChangeText={text => captureData(text, 'LastName')}
+            >
+            </TextInput>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='Mail'
-            name='Email'
-            onChangeText={text => captureData(text, 'Email')}
-        >
-        </TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='Mail'
+                name='Email'
+                onChangeText={text => captureData(text, 'Email')}
+            >
+            </TextInput>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='Password'
-            name='Password'
-            secureTextEntry={true}
-            onChangeText={text => captureData(text, 'Password')}
-        >
-        </TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='Password'
+                name='Password'
+                secureTextEntry={true}
+                onChangeText={text => captureData(text, 'Password')}
+            >
+            </TextInput>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='Photo Url'
-            name='Photo'
-            onChangeText={text => captureData(text, 'Photo')}
-        >
-        </TextInput>
+            <TextInput
+                style={styles.input}
+                placeholder='Photo Url'
+                name='Photo'
+                onChangeText={text => captureData(text, 'Photo')}
+            >
+            </TextInput>
 
-        <TextInput 
-            style={styles.input}
-            placeholder='Country'
-            name='Country'
-            onChangeText={text => captureData(text, 'Country')}
-        >
-        </TextInput>
-        <View style={styles.btnContainer}>
-            <Button color='#B84668' onPress={() => saveData()} title='Sign Up'></Button>
-        </View>
+            <TextInput
+                style={styles.input}
+                placeholder='Country'
+                name='Country'
+                onChangeText={text => captureData(text, 'Country')}
+            >
+            </TextInput>
+            <View style={styles.btnContainer}>
+                <Button color='#B84668' onPress={() => saveData()} title='Sign Up'></Button>
+            </View>
 
-    </SafeAreaView>
-  )
+        </SafeAreaView>
+    )
 }
 
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         alignItems: 'center',
     },
-    p:{
+    p: {
         fontSize: 19,
         margin: 10,
     },
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
         height: 100,
         margin: 10,
     },
-    input:{
+    input: {
         borderWidth: 1,
         borderColor: '#CBD2D9',
         borderRadius: 7,
@@ -148,11 +148,11 @@ const styles = StyleSheet.create({
         height: 35,
         margin: 8,
     },
-    message:{
-        color:'#627D98',
+    message: {
+        color: '#627D98',
         margin: 10,
     },
-    btnContainer:{
+    btnContainer: {
         width: 100,
         margin: 10
     }
