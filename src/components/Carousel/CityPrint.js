@@ -7,13 +7,13 @@ export default function CityCarousel(props) {
 
   return (
     <View style={styles.Container}>
-          <Image style={styles.CitiesCardImage}  source={{ uri: cities.photo }} alt={cities.city} />
-        <View style={styles.information} >
-          <Text style={styles.country} >{cities.country}</Text>
-          <Text style={styles.cityName} >{cities.city}</Text>
-        </View>
+      <Image style={styles.CitiesCardImage} source={{ uri: cities.photo }} alt={cities.city} />
+      <View style={styles.information} >
+        <Text style={styles.country} >{cities.country}</Text>
+        <Text style={styles.cityName} >{cities.city}</Text>
+      </View>
     </View>
-    
+
   )
 }
 
@@ -24,14 +24,15 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
     // alignItems: "center",
     // width: '100%',
-  },  
+    backgroundColor: "#fff",
+  },
   CitiesCardImage: {
     height: 300,
     width: 237,
     borderRadius: 15,
     margin: 12,
   },
-  information:{
+  information: {
     position: 'absolute',
     bottom: 12,
     left: 12,
@@ -39,23 +40,23 @@ const styles = StyleSheet.create({
     width: 237,
     height: 80,
     borderBottomLeftRadius: 15,
-    borderBottomRightRadius:15,
+    borderBottomRightRadius: 15,
     elevation: 8
 
   },
-  country:{
+  country: {
     color: 'white',
     textAlign: 'left',
     marginLeft: 40,
     fontSize: 32,
   },
-  cityName:{
+  cityName: {
     color: 'white',
     textAlign: 'left',
     marginLeft: 40,
     fontSize: 18,
-    textShadowColor: 'black', 
-        textShadowOffset: { width: 2, height: 1 },
-        textShadowRadius: 10,
+    textShadowColor: 'black',
+    textShadowOffset: { width: 2, height: 1 },
+    textShadowRadius: 10,
   }
 })

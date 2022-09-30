@@ -15,8 +15,10 @@ export default function MyTinerariesScreen() {
 
 const styles = StyleSheet.create({
     Container: {
-        justifyContent: "center",
-        backgroundColor: "#fff"
+        alignItems: 'center',
+        backgroundColor: "#fff",
+        height: '100%',
+        justifyContent: "center"
     },
     Image: {
         width: 400,
