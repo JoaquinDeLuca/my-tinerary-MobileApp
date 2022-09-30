@@ -6,6 +6,7 @@ import Itineraries from '../components/Itineraties/Itineraries'
 
 export default function Details({ navigation, route }) {
 
+
     const { id } = route.params
     const [city, setCity] = useState([])
 
