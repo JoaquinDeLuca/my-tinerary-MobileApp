@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux'
 import store from './src/features/store'
+import CitiesStack from './src/navigation/details/CitiesStack';
 import HomeScreen from './src/screens/HomeScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen'
 import CitiesScreen from './src/screens/CitiesScreen'
@@ -11,13 +12,12 @@ import SignUp from './src/components/SignUp';
 export default function App() {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <HomeScreen  />
-        {/* <WelcomeScreen /> */}
-        {/* <CitiesScreen /> */}
-        {/* <SignUp /> */}
-        <StatusBar style="auto" />
-      </View>
+      {/* <HomeScreen  /> */}
+      {/* <WelcomeScreen /> */}
+      {/* <CitiesScreen /> */}
+      {/* <SignUp /> */}
+      <CitiesStack />
+      <StatusBar style="auto" />
     </Provider>
   );
 }

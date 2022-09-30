@@ -1,9 +1,10 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 export default function CitiesScreen(props) {
 
     let cities = props.data
+    let navigation = props.navigation
 
     return (
         <View style={styles.CityContainer} >
@@ -15,13 +16,16 @@ export default function CitiesScreen(props) {
                     <Text style={styles.CitiesText}>{cities.city}</Text>
                     <Text style={styles.CitiesTextCoutry}>{cities.country}</Text>
                     <Text style={styles.CitiesTextInfo}>{cities.information}</Text>
-                    <Text style={styles.CitiesButtom}>View More </Text>
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate('details', { id: cities._id })
+                    }} >
+                        <Text style={styles.CitiesButtom}>View More </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
     )
 }
-
 const styles = StyleSheet.create({
     CityContainer: {
         width: '100%',
@@ -53,6 +57,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         left: 8,
         marginVertical: 18,
+        elevation: 6
         // alignItems: "center"
     },
     CitiesCardImageContainer: {
