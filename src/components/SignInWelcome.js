@@ -35,6 +35,7 @@ export default function WelcomeScreen(props) {
                         AsyncStorage.setItem('token', JSON.stringify(response.data.response.token))
                         // aca pasaria el verifyToken
                         console.log('______OK______')
+                        AsyncStorage.setItem('user',JSON.stringify(response.data.response.user))
                         navigation.navigate('ButtomNav')
                     } else {
                         // alert of error
@@ -82,11 +83,11 @@ export default function WelcomeScreen(props) {
 
             </View>
             <View style={styles.btnContainer}>
-                <Button color='#256D85' onPress={() => saveData()} title='Sign In'></Button>
+                <Button color='#B84668' onPress={() => saveData()} title='Sign In'></Button>
             </View>
 
             <Text style={styles.message}>don't you have an account?</Text>
-            <Button color='#256D85' title='Sign Up Now' onPress={() => {
+            <Button color='#B84668' title='Sign Up Now' onPress={() => {
                 navigation.navigate('SignUp')
             }}></Button>
 
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         margin: 10
     },
     message: {
-        color: '#7895B2',
+        color: '#000000',
         margin: 10,
     },
     btnContainer: {
