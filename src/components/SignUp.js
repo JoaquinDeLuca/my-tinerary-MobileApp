@@ -36,24 +36,24 @@ export default function SignUp() {
             from: 'form'
         }
         console.log(userDate)
-        signUpUser(userDate).then(response => console.log(response))
-        // .then(response => {
-        //     if (response.data.success === true) {
-        //         console.log(response)
-        //         Alert.alert(
-        //             'User',
-        //             'registered user successfully'
-        //         )
-        //     }
-        //     else {
-        //         console.log('_____INCORRECT_____')
-        //         Alert.alert(
-        //             'Incorrect',
-        //             'algo salio mal',
-        //         )
-        //     }
-        // })
-        
+        signUpUser(userDate)
+        .then(response => {
+            if (response.data.success === true) {
+                console.log(response)
+                Alert.alert(
+                    'User',
+                    'Successfully registered user, verify your account in the email we sent'
+                )
+            }
+            else {
+                console.log('_____INCORRECT_____')
+                Alert.alert(
+                    'Incorrect',
+                    'check the fields',
+                )
+            }
+        })
+        .then(response => console.log(response))
     }
 
 
