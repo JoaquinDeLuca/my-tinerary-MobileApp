@@ -17,7 +17,7 @@ export default function Header() {
 const styles = StyleSheet.create({
     HeaderContainer: {
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: 30,
         // backgroundColor: "#B84668",
         width: '100%',
         justifyContent: 'space-between',
