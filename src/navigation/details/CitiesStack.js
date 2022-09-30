@@ -8,12 +8,12 @@ const Stack = createNativeStackNavigator();
 export default function CitiesStack() {
 
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Cities" component={CitiesScreen} options={{ headerShadowVisible: false }} />
-                <Stack.Screen name="details" component={DetailsScreen} options={{ headerShadowVisible: false }} />
-            </Stack.Navigator>
-        </NavigationContainer >
+        // <NavigationContainer>
+        <Stack.Navigator>
+            <Stack.Screen name="Cities" component={CitiesScreen} options={{ headerShadowVisible: false }} />
+            <Stack.Screen name="details" component={DetailsScreen} options={{ headerShadowVisible: false }} />
+        </Stack.Navigator>
+        // </NavigationContainer >
     )
 
 }
