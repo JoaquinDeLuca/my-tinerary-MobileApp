@@ -2,7 +2,7 @@
 ![Imagen del proyecto](https://user-images.githubusercontent.com/110680187/198379855-882639a0-ff62-465e-81cf-4e64059d7abf.png?raw=true)
 
 ## Ejemplo en vivo
-Link YT
+https://www.youtube.com/watch?v=KFeb5D8M6q8
 
 ## Tecnologías 🛠
 <!-- Iconos sacados de: https://github.com/hendrasob/badges/blob/master/README.md y https://github.com/alexandresanlim/Badges4-README.md-Profile -->
@@ -21,7 +21,7 @@ Si quieres hechas un vistazo al proyecto, te recomiendo:
 ![Details](https://user-images.githubusercontent.com/110680187/198380045-0e905ba4-435e-4dff-bdaa-755a0cb93b33.png?raw=true)
 
 ## Instalación 
-
+Este proyecto necesitas hacer instalacion de todas las dependencias. Hacer (npm i) en la terminal para instalar las mismas.
   
 ## Licencia 📄
 MIT Public License v3.0
